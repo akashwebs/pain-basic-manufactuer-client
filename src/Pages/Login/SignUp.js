@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../Firebase.init';
+import useToken from '../../Hooks/useToken';
 import Loading from '../../Shared/Loading';
 import SocialLogin from './SocialLogin';
 
@@ -23,8 +24,10 @@ const SignUp = () => {
       const location = useLocation()
       const navigate = useNavigate()
       let from = location.state?.from?.pathname || '/';
+
+      const [token]=useToken(user)
       
-      if(user){
+      if(token){
           navigate(from, { replace: true });
           toast.success('send email verificaiton in your email')
           console.log(user)

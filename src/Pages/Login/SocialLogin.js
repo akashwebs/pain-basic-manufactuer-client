@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
+import useToken from '../../Hooks/useToken';
 import Loading from '../../Shared/Loading';
 
 const SocialLogin = () => {
@@ -19,8 +20,8 @@ const SocialLogin = () => {
     const location = useLocation()
       const navigate = useNavigate()
       let from = location.state?.from?.pathname || '/';
-      
-      if(user || gitUser){
+      const [token]=useToken(user || gitUser)
+      if(token){
           navigate(from, { replace: true });
       }
 

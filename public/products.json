@@ -1,50 +1,50 @@
 [
-    {
-      "image": "http://placehold.it/32x32",
-      "price": 36,
-      "minOrder": 15,
-      "name": "Rosario Blevins",
-      "stock": 210,
-      "discripton": "OTHERWAY"
-    },
-    {
-      "image": "http://placehold.it/32x32",
-      "price": 24,
-      "minOrder": 10,
-      "name": "Alexander Estes",
-      "stock": 270,
-      "discripton": "ZILODYNE"
-    },
-    {
-      "image": "http://placehold.it/32x32",
-      "price": 32,
-      "minOrder": 12,
-      "name": "Alma Talley",
-      "stock": 360,
-      "discripton": "GEEKOLA"
-    },
-    {
-      "image": "http://placehold.it/32x32",
-      "price": 38,
-      "minOrder": 8,
-      "name": "Vanessa Morgan",
-      "stock": 340,
-      "discripton": "HOMELUX"
-    },
-    {
-      "image": "http://placehold.it/32x32",
-      "price": 20,
-      "minOrder": 15,
-      "name": "Vicki Bowen",
-      "stock": 310,
-      "discripton": "OVATION"
-    },
-    {
-      "image": "http://placehold.it/32x32",
-      "price": 27,
-      "minOrder": 15,
-      "name": "Lora Vasquez",
-      "stock": 200,
-      "discripton": "GAZAK"
-    }
-  ]
+  {
+    "image": "https://m.media-amazon.com/images/I/71+n9vWTZgL._SY445_.jpg",
+    "price": 36,
+    "minOrder": 15,
+    "name": "Rosario BlevinsFlat Edge Master Pro Paint Brush",
+    "stock": 210,
+    "discripton": "Polyester-blend bristles: soft, yet firm and flexible with a tapered and tipped (flagged) design; holds an ample amount of paint for enhanced efficiency and provides a smoother stroke. Versatile: ideal for painting window frames, trim, tight corners, detailed areas, and craft projects; accommodates all types of paints, stains, and finishes"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/71ijnvDvMEL._AC_SY606_.jpg",
+    "price": 24,
+    "minOrder": 10,
+    "name": "Plaid Nylon Chip Brush Set, 44289 White",
+    "stock": 270,
+    "discripton": "Works on most any surface Great for base-coatingWash while wet with soap and water Product is reusable and craft projects; accommodates all types of paints, stains, and finishes"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/814FaGKi7NS._SX425_.jpg",
+    "price": 32,
+    "minOrder": 12,
+    "name": "Nylon Paint Brushes for Acrylic, Oil",
+    "stock": 360,
+    "discripton": "Artist's set with 10 paint brushes in a variety of shapes and sizes that make artistic creation easier.Short, smooth wood handle with painted finish offers precise control and a comfortable grip.Soft, sturdy, easy-to-clean nylon bristles hold up to frequent use and won’t fall off after washing"
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/81nz9g+WCzL._AC_SX425_PIbundle-12,TopRight,0,0_SH20_.jpg",
+    "price": 38,
+    "minOrder": 8,
+    "name": "Microfiber Paint Roller Covers",
+    "stock": 340,
+    "discripton": "Efficient performance: 1/2-inch pile height holds an ample amount of paint for time-saving convenience and fast, even paint application.Shed resistant: designed to not leave small pieces behind, helping to ensure a clean, professional-looking finish "
+  },
+  {
+    "image": "https://m.media-amazon.com/images/I/61KVi1-F+yL._AC_SX522_.jpg",
+    "price": 20,
+    "minOrder": 15,
+    "name": "Wooster Brush BR006-9 Acme Roller Frame 5-Wire",
+    "stock": 310,
+    "discripton": "This item is a Wooster Brush BR006-9 Acme Roller Frame 5-Wire, 9-Inch Purpose of use for Painting Supplies, paint-rollersThis product is manufactured in United States Sturdy 5-wire cage and polypropylene endcaps"
+  },
+  {
+    "image": "https://cdn.lorem.space/images/shoes/.cache/400x225/luis-felipe-lins-LG88A2XgIXY-unsplash.jpg  ",
+    "price": 27,
+    "minOrder": 15,
+    "name": "Foampro 162 Fine Finish Roller (High-Density Foam)",
+    "stock": 200,
+    "discripton": "FoamPRO 2 in. Mini roller is ideal for doors, moldings, trim and cabinets. Applies a lint-free, sprayed-like finish. For alkyd enamels, urethanes, varnishes, stains, primers, specialty coatings. For super-smooth, smooth and semi-smooth surfaces. For use with FoamPRO model for refill roller covers. 2 Ideal for doors, moldings, trim and cabinets Applies a lint-free, sprayed-like finish For super-smooth, smooth and semi-smooth surfaces For alkyd enamels, urethanes, varnishes, stains, primers, specialty coatings Saves time, saves paint and saves money Ideal for oils and clears For use with FoamPRO model for refill roller covers."
+  }
+]
