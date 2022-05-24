@@ -16,6 +16,7 @@ const Header = () => {
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/reviews'>Reviews</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>
+        <li><Link to='/login'>login</Link></li>
         {/* {
           user && <li><Link to={'/dashboard'}>Dashboard</Link></li>
         }
