@@ -51,9 +51,9 @@ const SignUp = () => {
     
     
     return (
-        <div class=" min-h-screen flex justify-center items-center bg-base-200">
+        <div class="  flex justify-center pb-12 items-center bg-base-200">
 
-        <div class=" w-full mt-[-150px] p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
+        <div class=" w-full mt-12 p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
             <div>
                 <h2 className='text-center text-5xl font-extrabold'>Paint Basic</h2>
                 <p className='text-center text-neutral'>Register for create an account</p>

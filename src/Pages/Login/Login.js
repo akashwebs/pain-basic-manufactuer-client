@@ -42,9 +42,9 @@ const Login = () => {
 
     }
     return (
-        <div class=" min-h-screen flex justify-center items-center bg-base-200">
+        <div class=" flex justify-center pb-28 items-center bg-base-200">
 
-            <div class=" w-full mt-[-150px] p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
+            <div class=" w-full mt-20 p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
                 <div>
                     <h2 className='text-center text-5xl font-extrabold'>Paint Basic</h2>
                     <p className='text-center text-neutral'>Login into your account</p>
