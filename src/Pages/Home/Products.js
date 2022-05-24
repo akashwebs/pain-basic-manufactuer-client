@@ -1,10 +1,11 @@
 import React from 'react';
 import { useQuery } from 'react-query'
+import useProdcts from '../../Hooks/useProdcts';
 import Loading from '../../Shared/Loading';
 import Product from './Product';
 
 const Products = () => {
-    const {data:products, isLoading}=useQuery('products', ()=>fetch('http://localhost:5000/products').then(res=>res.json()))
+   const [products,isLoading,refetch]=useProdcts()
     
     if(isLoading){
         return <Loading></Loading>
