@@ -89,7 +89,7 @@ const MyProfile = () => {
 
     return (
         <div className='lg:pr-5 lg:pl-2'>
-            <h2 className='text-3xl my-3 text-orange-500'> My Profile</h2>
+            <h2 className='text-4xl my-3 '> My Profile</h2>
             <button onClick={() => setEdit(!edit)} class={`btn gap-2 ${edit ? 'btn-accent ' : 'btn-success text-white'}`}>
                 <img className='w-8 h-8 ' src={editimg} alt="" />
                 Edit profile
