@@ -6,7 +6,9 @@ const useToken = (user) => {
     useEffect(()=>{
         const email=user?.user?.email;
         const currentUser={email}
-        if(email){
+        console.log('insdie token email',email)
+        console.log('current user',currentUser)
+        if(email && currentUser.email){
             fetch(`http://localhost:5000/user/${email}`,{
             method:'PUT',
             headers:{
