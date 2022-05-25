@@ -34,7 +34,9 @@ const Purchase = () => {
             address: data.address,
             quantity: quantityValue,
             totalPrice: price,
-            img:product.image
+            img: product.image,
+            productName: product?.name,
+            paid: false
         }
         fetch('http://localhost:5000/orders', {
             method: 'POST',
@@ -47,6 +49,7 @@ const Purchase = () => {
                 if (data.insertedId) {
                     toast.success('Order Successfully done ')
                     reset()
+                    setPrice(product.price)
                 }
             })
     }
@@ -73,16 +76,16 @@ const Purchase = () => {
             <div class="card w-full bg-base-100 shadow-xl">
                 <div class="card-body">
                     <div>
-                        <img src={product.image}  className={'h-48 mx-auto my-5'} alt="" />
+                        <img src={product.image} className={'h-48 mx-auto my-5'} alt="" />
                     </div>
                     <div>
-                    <p className='text-2xl leading-0 font-bold'>{product?.name}</p>
-                    <p className='text-xl my-2'>price: ${product?.price}</p>
-                    <p className='text-xl my-2'>stock: {product?.stock}</p>
-                    <p className='mt-2'>{product.discripton}</p>
+                        <p className='text-2xl leading-0 font-bold'>{product?.name}</p>
+                        <p className='text-xl my-2'>price: ${product?.price}</p>
+                        <p className='text-xl my-2'>stock: {product?.stock}</p>
+                        <p className='mt-2'>{product.discripton}</p>
                     </div>
-                     
-                    
+
+
                 </div>
             </div>
             <div class="card w-full  bg-base-100 shadow-xl">
