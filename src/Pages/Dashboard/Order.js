@@ -1,8 +1,8 @@
 import React from 'react';
 import swal from 'sweetalert';
 
-const Order = ({order,index}) => {
-    const {_id,img, productName, totalPrice,quantity,email}=order
+const Order = ({order,index,refetch}) => {
+    const {img, productName, totalPrice,quantity,email,paid}=order
 
     const handleRemoveOrder=()=>{
         
@@ -22,7 +22,10 @@ const Order = ({order,index}) => {
                         authorization:`beareer ${localStorage.getItem('accessToken')}`
                     }
                 }).then(res=>res.json())
-                .then(data=>console.log(data))
+                .then(data=>{
+                    console.log(data)
+                    refetch()
+                })
                 
               swal(`${productName} file has been deleted!`, {
                 icon: "success",
@@ -52,8 +55,8 @@ const Order = ({order,index}) => {
             <td>{quantity}</td>
             <td>${totalPrice}</td>
             <td>
-                <button onClick={handleRemoveOrder} className='btn btn-orange-400'>Cancle</button>
-                <div className="btn btn-accent ml-3">Pay</div>
+                {!paid && <button onClick={handleRemoveOrder} className='btn btn-orange-400'>Cancle</button>}
+                {!paid? <div className="btn btn-accent ml-3">Pay</div> : <span className='bg-success px-4 py-2 text-white'>paid</span>}
             </td>
 
         </tr>

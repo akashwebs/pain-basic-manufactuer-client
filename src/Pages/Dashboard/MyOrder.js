@@ -9,7 +9,7 @@ import Order from './Order';
 const MyOrder = () => {
     const [user] = useAuthState(auth)
 
-    const { data: orders, isLoading } = useQuery('myorders', () => fetch(`http://localhost:5000/orders/${user?.email}`, {
+    const { data: orders, isLoading,refetch } = useQuery('myorders', () => fetch(`http://localhost:5000/orders/${user?.email}`, {
         headers: {
             authorization: `Beeraar ${localStorage.getItem('accessToken')}`
         }
@@ -22,8 +22,11 @@ const MyOrder = () => {
 
     return (
         <div>
-            <h2>this is my order page:{orders?.length}</h2>
-
+            <div className='md:flex justify-between'>
+                <h2 className='text-3xl'>My Orders </h2>
+                <p className='lg:pr-5 text-xl'>total:{orders?.length}</p>
+            </div>
+            <div class="divider"></div>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                    
@@ -40,13 +43,14 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         
-                       {
-                           orders.map((order,index)=><Order
+                      {
+                           orders?.map((order,index)=><Order
                            key={order._id}
                            order={order}
                            index={index}
+                           refetch={refetch}
                            ></Order>)
-                       }
+                       } 
                     </tbody>
                 </table>
             </div>
