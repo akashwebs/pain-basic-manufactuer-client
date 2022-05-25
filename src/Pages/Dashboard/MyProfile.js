@@ -19,24 +19,24 @@ const MyProfile = () => {
             authorization: `Beereer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()))
-  
 
-    const handlePasswordUpdate=async data=>{
-       
-        const password=data.password;
-        const confirmPassword=data.confirmPassword;
-      
+
+    const handlePasswordUpdate = async data => {
+
+        const password = data.password;
+        const confirmPassword = data.confirmPassword;
+
         reset()
-        if(password===confirmPassword){
+        if (password === confirmPassword) {
 
             await updatePassword(password);
             swal("password change Succssfully!", "!", "success", {
                 button: "close!",
-              });
-        }else{
+            });
+        } else {
             swal("password dont match!", "!", "warning", {
                 button: "close!",
-              });
+            });
         }
     }
 
@@ -46,7 +46,9 @@ const MyProfile = () => {
         const updateUser = {
             userName: userName,
             phone: data.phone,
-            address: data.address
+            address: data.address,
+            education:data.education,
+            linkedinUrl:data.linkedinUrl
         }
         if (email && updateUser) {
             fetch(`http://localhost:5000/updateuser/${email}`, {
@@ -81,7 +83,7 @@ const MyProfile = () => {
 
         }
 
-       
+
 
     }
 
@@ -95,11 +97,43 @@ const MyProfile = () => {
             <div class="divider"></div>
 
             <form onSubmit={handleSubmit(handleUpdateProfile)} className='grid grid-cols-1 md:w-1/2 ' >
-                <input {...register("userName")} type="text" defaultValue={user?.displayName} disabled={!edit} class="input input-bordered w-full " />
-                <input type="text" value={user?.email} disabled class="input input-bordered mt-3 w-full " />
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Name</span>
+                    </label>
+                    <input {...register("userName")} type="text" defaultValue={user?.displayName} disabled={!edit} class="input input-bordered w-full " />
+                </div>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Email</span>
+                    </label>
+                <input type="text" value={user?.email} disabled class="input input-bordered mb-3 w-full " />
+                </div>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Phone</span>
+                    </label>
+                    <input {...register("phone")} type="text" defaultValue={userDb?.phone} disabled={!edit} placeholder='Enter your phone' class="input input-bordered mb-3 w-full " />
+                </div>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Linkdin profile</span>
+                    </label>
+                    <input {...register("linkedinUrl")} type="text" defaultValue={userDb?.linkedinUrl} disabled={!edit} placeholder='http://linkedin.com' class="input input-bordered mb-3 w-full " />
+                </div>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text"> Education: ex: CSE/HSC/SSC</span>
+                    </label>
+                    <input {...register("education")} type="text" defaultValue={userDb?.education} disabled={!edit} placeholder='Education' class="input input-bordered mb-3 w-full " />
+                </div>
 
-                <input {...register("phone")} type="text" defaultValue={userDb?.phone} disabled={!edit} placeholder='Enter your phone' class="input input-bordered mt-3 w-full " />
-                <textarea {...register("address")} defaultValue={userDb?.address} disabled={!edit} class="textarea mt-3 w-full  textarea-bordered" placeholder="Address"></textarea>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Your Adress</span>
+                    </label>
+                    <textarea {...register("address")} defaultValue={userDb?.address} disabled={!edit} class="textarea mb-2 w-full  textarea-bordered" placeholder="Address"></textarea>
+                </div>
 
                 <button disabled={!edit} name='submit' class="btn mt-3 btn-accent text-white font-bold text-xl">Update Profile </button>
             </form>
