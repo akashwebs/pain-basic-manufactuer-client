@@ -16,6 +16,8 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import AddProducts from './Pages/Dashboard/AddProducts';
 import Users from './Pages/Dashboard/Users';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
+import RequireAdmin from './Hooks/RequireAdmin';
 
 function App() {
   return (
@@ -30,14 +32,33 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
-          <Route index  element={<MyOrder></MyOrder>}></Route>
+          <Route path='/dashboard/myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReviews></AddReviews>}></Route>
-          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='addProduct' element={<AddProducts></AddProducts>}></Route>
-          <Route path='user' element={<Users></Users>}></Route>
-          <Route path='manageProduct' element={<ManageProducts></ManageProducts>}></Route>
+          <Route index  element={<MyProfile></MyProfile>}></Route>
+          <Route path='addProduct' element={
+             <RequireAdmin>
+               <AddProducts></AddProducts>
+             </RequireAdmin>
+          }></Route>
+          <Route path='user' element={
+             <RequireAdmin>
+               <Users></Users>
+             </RequireAdmin>
+          
+          }></Route>
+          <Route path='manageProduct' element={
+            <RequireAdmin>
+              <ManageProducts></ManageProducts>
+            </RequireAdmin>
+
+          }></Route>
+          <Route path='manageAllOrder' element={
+            <RequireAdmin>
+              <ManageAllOrders></ManageAllOrders>
+            </RequireAdmin>
+          }></Route>
         </Route>
-        <Route  path='login' element={<Login></Login>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
         <Route path='registar' element={<SignUp></SignUp>}></Route>
         <Route path='forgotPassword' element={<ForgotPassword></ForgotPassword>}></Route>
       </Routes>

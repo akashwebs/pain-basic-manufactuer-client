@@ -6,8 +6,7 @@ const useToken = (user) => {
     useEffect(()=>{
         const email=user?.user?.email;
         const currentUser={email}
-        console.log('insdie token email',email)
-        console.log('current user',currentUser)
+       
         if(email && currentUser.email){
             fetch(`http://localhost:5000/user/${email}`,{
             method:'PUT',
@@ -18,7 +17,7 @@ const useToken = (user) => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log('data insede use token',data)
+           
             const token=data.token;
             localStorage.setItem('accessToken', token)
             setToken(token);
