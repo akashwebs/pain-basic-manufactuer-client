@@ -19,6 +19,7 @@ import ManageProducts from './Pages/Dashboard/ManageProducts';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import RequireAdmin from './Hooks/RequireAdmin';
 import Pyment from './Pages/Dashboard/Pyment';
+import Footer from './Shared/Footer';
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path='registar' element={<SignUp></SignUp>}></Route>
         <Route path='forgotPassword' element={<ForgotPassword></ForgotPassword>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );

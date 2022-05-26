@@ -13,6 +13,10 @@
   }
 }
 
+.bg-img{
+  background-image: url('https://www.devsnews.com/wp/roxce/wp-content/uploads/2021/12/slider-2.jpg');
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

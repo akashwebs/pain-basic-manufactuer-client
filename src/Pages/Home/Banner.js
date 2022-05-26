@@ -4,20 +4,29 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
     return (
-        <Carousel autoPlay infiniteLoop>
-                <div>
-                    <img src={'https://cdn.shopify.com/s/files/1/2721/6956/files/bg3.jpg?v=1522671448'} alt=''/>
-                    <p className="legend">Legend 1</p>
+        <Carousel className='text-center' autoPlay infiniteLoop>
+            <div>
+                <img src={'https://www.devsnews.com/wp/roxce/wp-content/uploads/2021/12/slider-2.jpg'} alt='' />
+                <div className='legend'>
+
+                    <p className=" text-8xl">Painting All Basic Element Made</p>
                 </div>
-                <div>
-                    <img src={'https://cdn.shopify.com/s/files/1/2721/6956/files/bg1.jpg?v=1522671481'} alt='' />
-                    <p className="legend">Legend 2</p>
+            </div>
+            <div>
+                <img src={'https://www.devsnews.com/wp/roxce/wp-content/uploads/2021/12/slider-1.jpg'} alt='' />
+                <div className='legend'>
+
+                    <p className=" text-8xl">Painting All Basic Element Made</p>
                 </div>
-                <div>
-                    <img src={'https://cdn.shopify.com/s/files/1/2721/6956/files/bg3.jpg?v=1522671448'} alt=''/>
-                    <p className="legend">Legend 3</p>
+            </div>
+            <div>
+                <img src={'https://www.devsnews.com/wp/roxce/wp-content/uploads/2021/12/slider-3.jpg'} alt='' />
+                <div className='legend'>
+
+                    <p className=" text-8xl">Painting All Basic Element Made</p>
                 </div>
-            </Carousel>
+            </div>
+        </Carousel>
     );
 };
 
