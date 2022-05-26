@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 
 const Order = ({order,index,refetch}) => {
-    const {img, productName, totalPrice,quantity,email,paid}=order
+    const {_id,img, productName, totalPrice,quantity,email,paid}=order
 
     const handleRemoveOrder=()=>{
         
@@ -30,10 +31,10 @@ const Order = ({order,index,refetch}) => {
               swal(`${productName} file has been deleted!`, {
                 icon: "success",
               });
-              console.log('deleted')
+           
             } else {
                 swal("Your imaginary file is safe!");
-                console.log('not ')
+            
             }
           });
         
@@ -56,7 +57,9 @@ const Order = ({order,index,refetch}) => {
             <td>${totalPrice}</td>
             <td>
                 {!paid && <button onClick={handleRemoveOrder} className='btn btn-orange-400'>Cancle</button>}
-                {!paid? <div className="btn btn-accent ml-3">Pay</div> : <span className='bg-success px-4 py-2 text-white'>paid</span>}
+
+                {!paid? <Link 
+                to={`/dashboard/pyment/${_id}`} className='bg-success px-4 py-2 text-white'>Pay</Link> : <Link className='bg-accent px-4 py-2 text-white'>paid</Link>}
             </td>
 
         </tr>

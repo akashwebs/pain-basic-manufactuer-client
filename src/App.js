@@ -18,6 +18,7 @@ import Users from './Pages/Dashboard/Users';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import RequireAdmin from './Hooks/RequireAdmin';
+import Pyment from './Pages/Dashboard/Pyment';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+          <Route path='pyment/:idName' element={<Pyment></Pyment>}></Route>
           <Route path='/dashboard/myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReviews></AddReviews>}></Route>
           <Route index  element={<MyProfile></MyProfile>}></Route>
