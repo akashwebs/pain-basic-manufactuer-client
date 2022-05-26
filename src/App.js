@@ -20,6 +20,9 @@ import ManageAllOrders from './Pages/Dashboard/ManageAllOrders';
 import RequireAdmin from './Hooks/RequireAdmin';
 import Pyment from './Pages/Dashboard/Pyment';
 import Footer from './Shared/Footer';
+import NotFound from './Shared/NotFound';
+import Blog from './Pages/Blog';
+import MyPortfolio from './Pages/MyPortfolio';
 
 function App() {
   return (
@@ -64,6 +67,11 @@ function App() {
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='registar' element={<SignUp></SignUp>}></Route>
         <Route path='forgotPassword' element={<ForgotPassword></ForgotPassword>}></Route>
+        <Route path='blog' element={<Blog></Blog>}></Route>
+        <Route path='portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+      
+        <Route path='*' element={<NotFound></NotFound>}></Route>
+
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

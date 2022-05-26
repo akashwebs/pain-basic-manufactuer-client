@@ -12,8 +12,11 @@ const Products = () => {
     }
     
     return (
-        <div className='px-24'>
-            <h2>this is products seciont  {products?.length}</h2>
+        <div className='px-24 my-12'>
+            <div className="text-3xl lg:text-6xl text-center mb-16 text-primary font-extrabold">
+                Our best Products
+                <p className='text-xl md:text-3xl font-bold mt-4 text-neutral'></p>
+            </div>
            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
            {
                 products.slice(0,3).map(product=><Product
