@@ -127,7 +127,7 @@ const ManageOrder = ({ order, index, refetch }) => {
                 {pandingStatus && <div onClick={handlePanding} className="btn btn-accent ml-3">Panding</div>}
                 {(paid && !pandingStatus) && <div disabled className="btn btn-accent ml-3">shipped</div>}
 
-                <button onClick={handleRemoveOrder} className='ml-2 btn bg-red-400'>delete</button>
+               {(!paid && !pandingStatus) && <button onClick={handleRemoveOrder} className='ml-2 btn bg-red-400'>delete</button>}
             </td>
 
         </tr>
