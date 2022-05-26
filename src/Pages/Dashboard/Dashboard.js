@@ -20,6 +20,8 @@ const Dashboard = () => {
             <li><Link to={'/dashboard/review'}>Add A Review</Link></li>
             <li><Link to={'/dashboard/profile'}>My Profile</Link></li>
             <li><Link to={'/dashboard/addProduct'}>Add Products</Link></li>
+            <li><Link to={'/dashboard/user'}>Users</Link></li>
+            <li><Link to={'/dashboard/manageProduct'}>Manage Product</Link></li>
             {/* { admin && <>
               <li><Link to={'/dashboard/users'}>My Users</Link></li>
               <li><Link to={'/dashboard/addDoctor'}>Add a Doctor</Link></li>
