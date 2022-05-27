@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='container my-5 lg:px-24'>
-            <h3 className='text-center my-3'>Blogs</h3>
+           
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 <div className="card bg-base-100 shadow-xl">
