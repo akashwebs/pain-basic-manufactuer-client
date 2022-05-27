@@ -7,7 +7,7 @@ import partners from '../../Assetes/icon/counter-4.png'
 
 const ExploreExperiance = () => {
     return (
-        <div className='py-20 lg:px-24'>
+        <div className='py-20 px-3 lg:px-24'>
             <div className="text-3xl lg:text-6xl text-center mb-16 text-primary font-extrabold">Explore Our Expariance</div>
 
             <div className='grid text-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>

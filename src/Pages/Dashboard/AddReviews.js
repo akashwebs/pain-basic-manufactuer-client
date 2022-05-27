@@ -43,9 +43,9 @@ const AddReviews = () => {
 
     return (
         <div>
-            <h2 className='text-4xl'>Add Review </h2>
+            <h2 className='text-4xl px-3'>Add Review </h2>
             <div class="divider"></div>
-            <div class="card w-1/2 bg-base-100 shadow-xl">
+            <div class="card w-full  md:w-1/2 bg-base-100 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Add Review</h2>
 

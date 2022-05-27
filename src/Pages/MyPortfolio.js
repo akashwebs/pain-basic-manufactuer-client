@@ -5,12 +5,13 @@ import akash from '../Assetes/akash.png'
 
 const MyPortfolio = () => {
     return (
-        <div className="card w-1/2 bg-base-100  my-24 md:px-24">
-            <figure className="pt-10">
-                <img src={akash} alt="Shoes" className="rounded-xl  w-48" />
+        <div className="card w-full  md:w-1/2 bg-base-100  my-24 md:px-24">
+            <figure style={{'alignItems':'start', 'justifyContent':'start'}} className="pt-10 ">
+                <img src={akash} alt="" className="rounded-xl w-24 md:w-48" />
             </figure>
-            <div className="card-body ">
+            <div className="card-body">
                 <h2 className="card-title">Akash Shil</h2>
+                <h2 className="card-title">Junior Web Developer</h2>
                 <p>akashshil227@gmail.com</p>
                 <p>Bachelor of Computer Science & Engineering </p>
                 <h3 className="text-xl mt-6 font-bold">Skils </h3>
@@ -19,8 +20,10 @@ const MyPortfolio = () => {
                         <li>html, css3, bootstrap, tailwind</li>
                         <li>JavaScript</li>
                         <li>React Js</li>
+                        <li>Firebase</li>
                         <li>Node Js</li>
                         <li>MongoDB</li>
+                        <li>Payment Gatway</li>
 
                     </ul>
                 </div>

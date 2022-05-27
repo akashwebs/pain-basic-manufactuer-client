@@ -28,7 +28,7 @@ const BusinessSummary = () => {
     
     
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-5 px-24 my-20'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5 px-3 md:px-24 my-20'>
             {summary.map((sum,index)=><Summary sum={sum} key={index}></Summary>)}
         </div>
     );

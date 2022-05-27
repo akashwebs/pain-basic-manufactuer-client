@@ -21,7 +21,8 @@ const Users = () => {
    
     return (
         <div>
-            <h2>this is user:{users?.length}</h2>
+            <h2 className='text-4xl font-bold'>Users</h2>
+            <div className="divider"></div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
              

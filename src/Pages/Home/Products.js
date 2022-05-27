@@ -12,7 +12,7 @@ const Products = () => {
     }
     
     return (
-        <div className='px-24 my-12'>
+        <div className='px-3 md:px-24 my-12'>
             <div className="text-3xl lg:text-6xl text-center mb-16 text-primary font-extrabold">
                 Our best Products
                 <p className='text-xl md:text-3xl font-bold mt-4 text-neutral'></p>

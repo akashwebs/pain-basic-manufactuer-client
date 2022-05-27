@@ -21,7 +21,7 @@ const MyOrder = () => {
     }
 
     return (
-        <div>
+        <div className='px-3'>
             <div className='md:flex justify-between'>
                 <h2 className='text-3xl'>My Orders </h2>
                 <p className='lg:pr-5 text-xl'>total:{orders?.length}</p>

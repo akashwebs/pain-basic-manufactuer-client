@@ -13,7 +13,7 @@ const Reivew = () => {
     }
     
     return (
-        <div className='py-20 lg:px-24'>
+        <div className='py-20 px-3 lg:px-24'>
             <div className="text-3xl lg:text-6xl text-center mb-16 text-primary font-extrabold">
                 Review
                 <p className='text-xl md:text-3xl font-bold mt-4 text-neutral'>What Our Clients Say About Us.</p>

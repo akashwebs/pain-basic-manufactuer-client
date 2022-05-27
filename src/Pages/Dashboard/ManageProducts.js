@@ -16,7 +16,7 @@ const ManageProducts = () => {
     
     return (
         <div>
-            <h2 className='text-4xl'>Manage Product</h2>
+            <h2 className='text-4xl font-bold'>Manage Product</h2>
             <div className="divider"></div>
 
             <div>
