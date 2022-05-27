@@ -23,6 +23,7 @@ import Footer from './Shared/Footer';
 import NotFound from './Shared/NotFound';
 import Blog from './Pages/Blog';
 import MyPortfolio from './Pages/MyPortfolio';
+import AllProducts from './Pages/AllProducts';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/allproducts' element={<AllProducts></AllProducts>}></Route>
         <Route path='/products/:id' element={
           <RequireAuth>
             <Purchase></Purchase>
