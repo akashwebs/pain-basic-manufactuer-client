@@ -6,13 +6,13 @@ const AddProducts = () => {
     const {register, handleSubmit,reset}=useForm()
 
     const handleAddProducts=(data)=>{
-        console.log(data)
+       
         const image=data.image[0];
         const formData=new FormData()
         formData.append('image',image)
    
         const url=`https://api.imgbb.com/1/upload?key=${process.env.REACT_APP_imageKey}`
-        console.log(url)
+     
         fetch(url, {
             method: 'POST',
             body: formData
@@ -28,7 +28,7 @@ const AddProducts = () => {
                         discripton: data.discripton,
                         image: imgUrl
                     }
-                    console.log(product)
+                   
                     fetch('https://fierce-fjord-58610.herokuapp.com/product', {
                         method: "POST",
                         headers: {

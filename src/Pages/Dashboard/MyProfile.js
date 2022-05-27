@@ -91,62 +91,62 @@ const MyProfile = () => {
     return (
         <div className='lg:pr-5 lg:pl-2'>
             <h2 className='text-4xl my-3 '> My Profile</h2>
-            <button onClick={() => setEdit(!edit)} className={`btn gap-2 ${edit ? 'btn-accent ' : 'btn-success text-white'}`}>
+            <button onClick={() => setEdit(!edit)} class={`btn gap-2 ${edit ? 'btn-accent ' : 'btn-success text-white'}`}>
                 <img className='w-8 h-8 ' src={editimg} alt="" />
                 Edit profile
             </button>
-            <div className="divider"></div>
+            <div class="divider"></div>
 
             <form onSubmit={handleSubmit(handleUpdateProfile)} className='grid grid-cols-1 md:w-1/2 ' >
-                <div className="form-control w-full ">
-                    <label className="label">
-                        <span className="label-text">Name</span>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Name</span>
                     </label>
-                    <input {...register("userName")} type="text" defaultValue={user?.displayName} disabled={!edit} className="input input-bordered w-full " />
+                    <input {...register("userName")} type="text" defaultValue={user?.displayName} disabled={!edit} class="input input-bordered w-full " />
                 </div>
-                <div className="form-control w-full ">
-                    <label className="label">
-                        <span className="label-text">Email</span>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Email</span>
                     </label>
-                <input type="text" value={user?.email} disabled className="input input-bordered mb-3 w-full " />
+                <input type="text" value={user?.email} disabled class="input input-bordered mb-3 w-full " />
                 </div>
-                <div className="form-control w-full ">
-                    <label className="label">
-                        <span className="label-text">Phone</span>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Phone</span>
                     </label>
-                    <input {...register("phone")} type="text" defaultValue={userDb?.phone} disabled={!edit} placeholder='Enter your phone' className="input input-bordered mb-3 w-full " />
+                    <input {...register("phone")} type="text" defaultValue={userDb?.phone} disabled={!edit} placeholder='Enter your phone' class="input input-bordered mb-3 w-full " />
                 </div>
-                <div className="form-control w-full ">
-                    <label className="label">
-                        <span className="label-text">Linkdin profile</span>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Linkdin profile</span>
                     </label>
-                    <input {...register("linkedinUrl")} type="text" defaultValue={userDb?.linkedinUrl} disabled={!edit} placeholder='http://linkedin.com' className="input input-bordered mb-3 w-full " />
+                    <input {...register("linkedinUrl")} type="text" defaultValue={userDb?.linkedinUrl} disabled={!edit} placeholder='http://linkedin.com' class="input input-bordered mb-3 w-full " />
                 </div>
-                <div className="form-control w-full ">
-                    <label className="label">
-                        <span className="label-text"> Education: ex: CSE/HSC/SSC</span>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text"> Education: ex: CSE/HSC/SSC</span>
                     </label>
-                    <input {...register("education")} type="text" defaultValue={userDb?.education} disabled={!edit} placeholder='Education' className="input input-bordered mb-3 w-full " />
-                </div>
-
-                <div className="form-control w-full ">
-                    <label className="label">
-                        <span className="label-text">Your Adress</span>
-                    </label>
-                    <textarea {...register("address")} defaultValue={userDb?.address} disabled={!edit} className="textarea mb-2 w-full  textarea-bordered" placeholder="Address"></textarea>
+                    <input {...register("education")} type="text" defaultValue={userDb?.education} disabled={!edit} placeholder='Education' class="input input-bordered mb-3 w-full " />
                 </div>
 
-                <button disabled={!edit} name='submit' className="btn mt-3 btn-accent text-white font-bold text-xl">Update Profile </button>
+                <div class="form-control w-full ">
+                    <label class="label">
+                        <span class="label-text">Your Adress</span>
+                    </label>
+                    <textarea {...register("address")} defaultValue={userDb?.address} disabled={!edit} class="textarea mb-2 w-full  textarea-bordered" placeholder="Address"></textarea>
+                </div>
+
+                <button disabled={!edit} name='submit' class="btn mt-3 btn-accent text-white font-bold text-xl">Update Profile </button>
             </form>
 
             {/* here reset password  */}
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <form onSubmit={handleSubmit(handlePasswordUpdate)} className="card-body">
-                    <h2 className="card-title">Change Password</h2>
-                    <input {...register('password')} type="password" placeholder=" password" className="input input-bordered w-full max-w-xs" />
-                    <input {...register('confirmPassword')} type="password" placeholder="Confirm Password" className="input input-bordered w-full max-w-xs" />
-                    <div className="card-actions justify-start">
-                        <button className="btn btn-primary text-white">update Password</button>
+            <div class="card mb-24  w-96 bg-base-100 shadow-xl">
+                <form onSubmit={handleSubmit(handlePasswordUpdate)} class="card-body">
+                    <h2 class="card-title">Change Password</h2>
+                    <input {...register('password')} type="password" placeholder=" password" class="input input-bordered w-full max-w-xs" />
+                    <input {...register('confirmPassword')} type="password" placeholder="Confirm Password" class="input input-bordered w-full max-w-xs" />
+                    <div class="card-actions justify-start">
+                        <button class="btn btn-primary text-white">update Password</button>
                     </div>
                 </form>
                 {Perror?.message}
