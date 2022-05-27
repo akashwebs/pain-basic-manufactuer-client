@@ -17,7 +17,7 @@ const ManageOrder = ({ order, index, refetch }) => {
             .then((willDelete) => {
                 if (willDelete) {
 
-                    fetch(`http://localhost:5000/orders/${email}`, {
+                    fetch(`https://fierce-fjord-58610.herokuapp.com/orders/${email}`, {
                         method: 'DELETE',
                         headers: {
                             authorization: `beareer ${localStorage.getItem('accessToken')}`
@@ -60,7 +60,7 @@ const ManageOrder = ({ order, index, refetch }) => {
                 if (willDelete) {
                     console.log(pay)
 
-                    fetch(`http://localhost:5000/orders/${_id}`, {
+                    fetch(`https://fierce-fjord-58610.herokuapp.com/orders/${_id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json',
@@ -89,7 +89,7 @@ const ManageOrder = ({ order, index, refetch }) => {
         const panding={
             pandingStatus:false
         }
-        fetch(`http://localhost:5000/orders/${_id}`, {
+        fetch(`https://fierce-fjord-58610.herokuapp.com/orders/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

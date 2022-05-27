@@ -6,13 +6,13 @@ const Product = ({ product }) => {
     
     
     return (
-        <div class="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl">
             <figure>
                 <img className='h-[170px] w-full' src={image} alt="" />
             </figure>
-            <div class="card-body">
+            <div className="card-body">
                 <div className='flex justify-between items-center'>
-                    <div class="text-2xl">{name}</div>
+                    <div className="text-2xl">{name}</div>
                     
                 </div>
                 <p className='text-neutral'>{discripton.slice(0,120)}</p>
@@ -23,8 +23,8 @@ const Product = ({ product }) => {
                     <p><strong>stock:</strong> {stock}</p>
                 </div>
                
-                <div class="card-actions justify-start">
-                    <Link to={`products/${_id}`} class="btn btn-primary text-white">Place Order</Link>
+                <div className="card-actions justify-start">
+                    <Link to={`products/${_id}`} className="btn btn-primary text-white">Place Order</Link>
                 </div>
             </div>
         </div>

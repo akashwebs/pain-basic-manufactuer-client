@@ -18,7 +18,7 @@ const ManageProductRow = ({product, index,refetch}) => {
           .then((willDelete) => {
             if (willDelete) {
 
-                fetch(`http://localhost:5000/product/${_id}`,{
+                fetch(`https://fierce-fjord-58610.herokuapp.com/product/${_id}`,{
                     method:'DELETE',
                     headers:{
                         authorization:`beareer ${localStorage.getItem('accessToken')}`

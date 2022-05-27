@@ -13,34 +13,34 @@ const ExploreExperiance = () => {
             <div className='grid text-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
 
 
-                <div class="card  bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card  bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <img className='w-16 h-16 mx-auto' src={expriance} alt="" />
-                        <h2 class="text-center text-3xl font-bold ">25+</h2>
+                        <h2 className="text-center text-3xl font-bold ">25+</h2>
                         <p>Years Expriance</p>
 
                     </div>
                 </div>
-                <div class="card  bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card  bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <img className='w-16 h-16 mx-auto' src={awards} alt="" />
-                        <h2 class="text-3xl font-bold  text-center">456+</h2>
+                        <h2 className="text-3xl font-bold  text-center">456+</h2>
                         <p>Awards Winning</p>
 
                     </div>
                 </div>
-                <div class="card  bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card  bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <img className='w-16 h-16 mx-auto' src={partners} alt="" />
-                        <h2 class="text-3xl font-bold  text-center">87</h2>
+                        <h2 className="text-3xl font-bold  text-center">87</h2>
                         <p>Busness Partners</p>
 
                     </div>
                 </div>
-                <div class="card  bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card  bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <img className='w-16 h-16 mx-auto' src={courntry} alt="" />
-                        <h2 class="text-3xl font-bold  text-center">28</h2>
+                        <h2 className="text-3xl font-bold  text-center">28</h2>
                         <p>Country Export</p>
 
                     </div>

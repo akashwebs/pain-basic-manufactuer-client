@@ -9,7 +9,7 @@ import Order from './Order';
 const MyOrder = () => {
     const [user] = useAuthState(auth)
 
-    const { data: orders, isLoading,refetch } = useQuery('myorders', () => fetch(`http://localhost:5000/orders/${user?.email}`, {
+    const { data: orders, isLoading,refetch } = useQuery('myorders', () => fetch(`https://fierce-fjord-58610.herokuapp.com/orders/${user?.email}`, {
         headers: {
             authorization: `Beeraar ${localStorage.getItem('accessToken')}`
         }
@@ -26,9 +26,9 @@ const MyOrder = () => {
                 <h2 className='text-3xl'>My Orders </h2>
                 <p className='lg:pr-5 text-xl'>total:{orders?.length}</p>
             </div>
-            <div class="divider"></div>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="divider"></div>
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                    
                     <thead className=''>
                         <tr>

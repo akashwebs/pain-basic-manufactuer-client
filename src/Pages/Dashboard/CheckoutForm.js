@@ -14,7 +14,7 @@ const CheckoutForm = ({ products }) => {
     const { _id, totalPrice, email, name } = products;
 
    useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://fierce-fjord-58610.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -84,7 +84,7 @@ const CheckoutForm = ({ products }) => {
 
             }
             
-           fetch(`http://localhost:5000/orders/${_id}`, {
+           fetch(`https://fierce-fjord-58610.herokuapp.com/orders/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json',

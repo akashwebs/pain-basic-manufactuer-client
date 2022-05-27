@@ -5,7 +5,7 @@ import ManageOrder from './ManageOrder';
 
 const ManageAllOrders = () => {
 
-    const { data: orders, isLoading,refetch } = useQuery('mangeAllOrdres', () => fetch(`http://localhost:5000/orders/`, {
+    const { data: orders, isLoading,refetch } = useQuery('mangeAllOrdres', () => fetch(`https://fierce-fjord-58610.herokuapp.com/orders/`, {
         headers: {
             authorization: `Beeraar ${localStorage.getItem('accessToken')}`
         }
@@ -23,8 +23,8 @@ const ManageAllOrders = () => {
             <h2 className='text-4xl font-bold'>Manage All Order</h2>
             <div className="divider"></div>
           
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                    
                     <thead className=''>
                         <tr>

@@ -42,17 +42,17 @@ const Login = () => {
 
     }
     return (
-        <div class=" flex justify-center pb-28 items-center bg-base-200">
+        <div className=" flex justify-center pb-28 items-center bg-base-200">
 
-            <div class=" w-full mt-20 p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
+            <div className=" w-full mt-20 p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
                 <div>
                     <h2 className='text-center text-5xl font-extrabold'>Paint Basic</h2>
                     <p className='text-center text-neutral'>Login into your account</p>
                 </div>
-                <form onSubmit={handleSubmit(handleLogin)} class="card-body" >
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Email</span>
+                <form onSubmit={handleSubmit(handleLogin)} className="card-body" >
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
                         </label>
                         <input 
                         {...register("email", {
@@ -65,7 +65,7 @@ const Login = () => {
                                 message: 'invalid email'
                             }
                         })}
-                         type="text" placeholder="email" class="input input-bordered" />
+                         type="text" placeholder="email" className="input input-bordered" />
                          <label className="label">
                                 {errors.email?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
                                 {errors.email?.type === 'pattern' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
@@ -73,9 +73,9 @@ const Login = () => {
 
                             </label>
                     </div>
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Password</span>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Password</span>
                         </label>
                         <input
                          {...register("password", {
@@ -88,20 +88,20 @@ const Login = () => {
                                 message: 'password should be 6 charecter or longer'
                             }
                         })}
-                         type="text" placeholder="password" class="input input-bordered" />
+                         type="text" placeholder="password" className="input input-bordered" />
                          <label className="label">
                                 {errors.password?.type === 'minLength' && <span className="text-red-500 label-text-alt">{errors.password.message}</span>}
                                 {errors.password?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.password.message}</span>}
 
                             </label>
                          
-                        <label class="label">
-                            <Link to={'/forgotPassword'}  class="label-text-alt link link-hover">Forgot password?</Link>
+                        <label className="label">
+                            <Link to={'/forgotPassword'}  className="label-text-alt link link-hover">Forgot password?</Link>
                         </label>
                     </div>
                     {errorMessage}
-                    <div class="form-control mt-6">
-                        <button class="btn btn-primary text-white font-bold">Login</button>
+                    <div className="form-control mt-6">
+                        <button className="btn btn-primary text-white font-bold">Login</button>
                     </div>
                 </form>
             <SocialLogin></SocialLogin>

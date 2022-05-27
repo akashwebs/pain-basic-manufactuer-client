@@ -14,7 +14,7 @@ const Purchase = () => {
 
 
 
-    const { data: product, isLoading, refetch } = useQuery(['productDetails', id], () => fetch(`http://localhost:5000/products/${id}`)
+    const { data: product, isLoading, refetch } = useQuery(['productDetails', id], () => fetch(`https://fierce-fjord-58610.herokuapp.com/products/${id}`)
         .then(res => res.json())
     )
 
@@ -38,7 +38,7 @@ const Purchase = () => {
             productName: product?.name,
             paid: false
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fierce-fjord-58610.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
@@ -73,8 +73,8 @@ const Purchase = () => {
 
     return (
         <div className=' grid grid-cols-1 md:grid-cols-2 px-24 gap-12 my-12'>
-            <div class="card w-full bg-base-100 shadow-xl">
-                <div class="card-body">
+            <div className="card w-full bg-base-100 shadow-xl">
+                <div className="card-body">
                     <div>
                         <img src={product.image} className={'h-48 mx-auto my-5'} alt="" />
                     </div>
@@ -88,40 +88,40 @@ const Purchase = () => {
 
                 </div>
             </div>
-            <div class="card w-full  bg-base-100 shadow-xl">
-                <div class="card-body">
+            <div className="card w-full  bg-base-100 shadow-xl">
+                <div className="card-body">
                     <p className='text-3xl font-bold'>Confirm Place Order</p>
                     <form onSubmit={handleSubmit(handlePurchase)} className='grid grid-cols-1' >
-                        <input type="text" value={user?.displayName} disabled class="input input-bordered w-full " />
-                        <input type="text" value={user?.email} disabled class="input input-bordered mt-3 w-full " />
+                        <input type="text" value={user?.displayName} disabled className="input input-bordered w-full " />
+                        <input type="text" value={user?.email} disabled className="input input-bordered mt-3 w-full " />
 
-                        <input {...register("phone")} required type="text" placeholder='Enter your phone' class="input input-bordered mt-3 w-full " />
-                        <textarea {...register("address")} required class="textarea mt-3 w-full  textarea-bordered" placeholder="Address"></textarea>
+                        <input {...register("phone")} required type="text" placeholder='Enter your phone' className="input input-bordered mt-3 w-full " />
+                        <textarea {...register("address")} required className="textarea mt-3 w-full  textarea-bordered" placeholder="Address"></textarea>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
 
-                            <div class="form-control w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Available Stock</span>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Available Stock</span>
                                 </label>
-                                <input type="text" value={product?.stock} disabled class="input input-bordered " />
-                                <label class="label">
-                                    {/* <span class="label-text-alt">Alt label</span> */}
+                                <input type="text" value={product?.stock} disabled className="input input-bordered " />
+                                <label className="label">
+                                    {/* <span className="label-text-alt">Alt label</span> */}
                                 </label>
                             </div>
-                            <div class="form-control w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Minimum Order: {product?.minOrder}</span>
+                            <div className="form-control w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Minimum Order: {product?.minOrder}</span>
                                 </label>
-                                <input name='quantity' onChange={hanleQuantity} type="text" placeholder='Entar Quantity' class="input input-bordered " />
+                                <input name='quantity' onChange={hanleQuantity} type="text" placeholder='Entar Quantity' className="input input-bordered " />
 
                             </div>
                         </div>
-                        <label class="label">
-                            <span class="label-text">price: ${product?.price}</span>
+                        <label className="label">
+                            <span className="label-text">price: ${product?.price}</span>
                         </label>
-                        <input type="text" value={'$' + price} readOnly class="input input-bordered  w-full " />
-                        <button name='submit' disabled={!isTrue} class="btn mt-3 btn-accent text-white font-bold text-xl">Purchase </button>
+                        <input type="text" value={'$' + price} readOnly className="input input-bordered  w-full " />
+                        <button name='submit' disabled={!isTrue} className="btn mt-3 btn-accent text-white font-bold text-xl">Purchase </button>
                     </form>
                 </div>
             </div>

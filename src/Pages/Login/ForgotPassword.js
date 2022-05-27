@@ -22,17 +22,17 @@ const ForgotPassword = () => {
     }
     
     return (
-        <div class=" min-h-screen flex justify-center items-center bg-base-200">
+        <div className=" min-h-screen flex justify-center items-center bg-base-200">
 
-            <div class=" w-full mt-[-150px] p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
+            <div className=" w-full mt-[-150px] p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
                 <div>
                     <h2 className='text-center text-5xl font-extrabold'>Paint Basic</h2>
                     <p className='text-center text-neutral'>Login into your account</p>
                 </div>
-                <form onSubmit={handleSubmit(handleResetPassowrd)} class="card-body" >
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Your Email</span>
+                <form onSubmit={handleSubmit(handleResetPassowrd)} className="card-body" >
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Your Email</span>
                         </label>
                         <input 
                         {...register("email", {
@@ -45,7 +45,7 @@ const ForgotPassword = () => {
                                 message: 'invalid email'
                             }
                         })}
-                         type="text" placeholder="email" class="input input-bordered" />
+                         type="text" placeholder="email" className="input input-bordered" />
                          <label className="label">
                                 {errors.email?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
                                 {errors.email?.type === 'pattern' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
@@ -55,8 +55,8 @@ const ForgotPassword = () => {
                     </div>
                    
                    
-                    <div class="form-control mt-6">
-                        <button class="btn bg-black text-white font-bold">Send Me Email</button>
+                    <div className="form-control mt-6">
+                        <button className="btn bg-black text-white font-bold">Send Me Email</button>
                     </div>
                 </form>
             

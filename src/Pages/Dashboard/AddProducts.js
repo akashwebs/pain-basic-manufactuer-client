@@ -29,7 +29,7 @@ const AddProducts = () => {
                         image: imgUrl
                     }
                     console.log(product)
-                    fetch('http://localhost:5000/product', {
+                    fetch('https://fierce-fjord-58610.herokuapp.com/product', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',
@@ -56,45 +56,45 @@ const AddProducts = () => {
             <h2 className='text-4xl font-bold'>Add Products</h2>
             <div className="divider"></div>
             <form onSubmit={handleSubmit(handleAddProducts)} className='grid grid-cols-1 md:w-1/2 ' >
-                <div class="form-control w-full ">
-                    <label class="label">
-                        <span class="label-text">Product Title</span>
+                <div className="form-control w-full ">
+                    <label className="label">
+                        <span className="label-text">Product Title</span>
                     </label>
-                    <input {...register("name")} type="text"  class="input input-bordered w-full " />
+                    <input {...register("name")} type="text"  className="input input-bordered w-full " />
                 </div>
-                <div class="form-control w-full ">
-                    <label class="label">
-                        <span class="label-text">Price</span>
+                <div className="form-control w-full ">
+                    <label className="label">
+                        <span className="label-text">Price</span>
                     </label>
-                <input type="number" {...register('price')} class="input input-bordered mb-3 w-full " />
+                <input type="number" {...register('price')} className="input input-bordered mb-3 w-full " />
                 </div>
-                <div class="form-control w-full ">
-                    <label class="label">
-                        <span class="label-text">Minimum Order</span>
+                <div className="form-control w-full ">
+                    <label className="label">
+                        <span className="label-text">Minimum Order</span>
                     </label>
-                    <input {...register("minOrder")} type="number" class="input input-bordered mb-3 w-full " />
+                    <input {...register("minOrder")} type="number" className="input input-bordered mb-3 w-full " />
                 </div>
-                <div class="form-control w-full ">
-                    <label class="label">
-                        <span class="label-text">Stock</span>
+                <div className="form-control w-full ">
+                    <label className="label">
+                        <span className="label-text">Stock</span>
                     </label>
-                    <input {...register("stock")} type="number"  class="input input-bordered mb-3 w-full " />
+                    <input {...register("stock")} type="number"  className="input input-bordered mb-3 w-full " />
                 </div>
-                <div class="form-control w-full ">
-                    <label class="label">
-                        <span class="label-text"> Image</span>
+                <div className="form-control w-full ">
+                    <label className="label">
+                        <span className="label-text"> Image</span>
                     </label>
-                    <input {...register("image")} type="file" class="input input-bordered mb-3 w-full " />
-                </div>
-
-                <div class="form-control w-full ">
-                    <label class="label">
-                        <span class="label-text">Product Details</span>
-                    </label>
-                    <textarea {...register("discripton")}  class="textarea mb-2 w-full  textarea-bordered" ></textarea>
+                    <input {...register("image")} type="file" className="input input-bordered mb-3 w-full " />
                 </div>
 
-                <button name='submit' class="btn mt-3 btn-accent text-white font-bold text-xl">Add Product </button>
+                <div className="form-control w-full ">
+                    <label className="label">
+                        <span className="label-text">Product Details</span>
+                    </label>
+                    <textarea {...register("discripton")}  className="textarea mb-2 w-full  textarea-bordered" ></textarea>
+                </div>
+
+                <button name='submit' className="btn mt-3 btn-accent text-white font-bold text-xl">Add Product </button>
             </form>
         </div>
     );

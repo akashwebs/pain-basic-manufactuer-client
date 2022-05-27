@@ -51,17 +51,17 @@ const SignUp = () => {
     
     
     return (
-        <div class="  flex justify-center pb-12 items-center bg-base-200">
+        <div className="  flex justify-center pb-12 items-center bg-base-200">
 
-        <div class=" w-full mt-12 p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
+        <div className=" w-full mt-12 p-12  md:w-1/2 rounded-lg shadow-2xl bg-base-100">
             <div>
                 <h2 className='text-center text-5xl font-extrabold'>Paint Basic</h2>
                 <p className='text-center text-neutral'>Register for create an account</p>
             </div>
-            <form onSubmit={handleSubmit(handleSignup)} class="card-body" >
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Your Name</span>
+            <form onSubmit={handleSubmit(handleSignup)} className="card-body" >
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Your Name</span>
                     </label>
                     <input 
                      {...register("name", {
@@ -71,16 +71,16 @@ const SignUp = () => {
                         }
                         
                     })}
-                     type="text" placeholder="Name" class="input input-bordered" />
+                     type="text" placeholder="Name" className="input input-bordered" />
                      <label className="label">
                      {errors.name?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.name.message}</span> }
 
 
                         </label>
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Email</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Email</span>
                     </label>
                     <input 
                     {...register("email", {
@@ -93,7 +93,7 @@ const SignUp = () => {
                             message: 'invalid email'
                         }
                     })}
-                     type="text" placeholder="email" class="input input-bordered" />
+                     type="text" placeholder="email" className="input input-bordered" />
                      <label className="label">
                             {errors.email?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
                             {errors.email?.type === 'pattern' && <span className="text-red-500 label-text-alt">{errors.email.message}</span>}
@@ -101,9 +101,9 @@ const SignUp = () => {
 
                         </label>
                 </div>
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Password</span>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Password</span>
                     </label>
                     <input
                      {...register("password", {
@@ -116,7 +116,7 @@ const SignUp = () => {
                             message: 'password should be 6 charecter or longer'
                         }
                     })}
-                     type="password" placeholder="password" class="input input-bordered" />
+                     type="password" placeholder="password" className="input input-bordered" />
                      <label className="label">
                             {errors.password?.type === 'minLength' && <span className="text-red-500 label-text-alt">{errors.password.message}</span>}
                             {errors.password?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.password.message}</span>}
@@ -126,8 +126,8 @@ const SignUp = () => {
                 
                 </div>
                 {errorMessage}
-                <div class="form-control mt-6">
-                    <button class="btn btn-primary text-white font-bold">Login</button>
+                <div className="form-control mt-6">
+                    <button className="btn btn-primary text-white font-bold">Login</button>
                 </div>
             </form>
         <SocialLogin></SocialLogin>

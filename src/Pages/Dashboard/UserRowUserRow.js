@@ -6,7 +6,7 @@ const UserRow = ({user,refetch,index}) => {
     const {email,role}=user;
 
     const handleMakeAdmin=()=>{
-        fetch(`http://localhost:5000/user/admin/${email}`,{
+        fetch(`https://fierce-fjord-58610.herokuapp.com/user/admin/${email}`,{
             method:'PUT',
             headers:{
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -43,7 +43,7 @@ const UserRow = ({user,refetch,index}) => {
           .then((willDelete) => {
             if (willDelete) {
 
-                fetch(`http://localhost:5000/user/${email}`,{
+                fetch(`https://fierce-fjord-58610.herokuapp.com/user/${email}`,{
                     method:'DELETE',
                     headers:{
                         authorization:`beareer ${localStorage.getItem('accessToken')}`
@@ -71,8 +71,8 @@ const UserRow = ({user,refetch,index}) => {
             <tr>
                 <th>{index+1}</th>
                 <td>{email}</td>
-                <td>{role !=='admin' && <button onClick={handleMakeAdmin} class="btn btn-xs">Make Admin</button>}</td>
-                <td><button onClick={removeUser} class="btn btn-xs">Remove User</button></td>
+                <td>{role !=='admin' && <button onClick={handleMakeAdmin} className="btn btn-xs">Make Admin</button>}</td>
+                <td><button onClick={removeUser} className="btn btn-xs">Remove User</button></td>
             </tr>
         
     );

@@ -17,7 +17,7 @@ const Order = ({order,index,refetch}) => {
           .then((willDelete) => {
             if (willDelete) {
 
-                fetch(`http://localhost:5000/orders/${email}`,{
+                fetch(`https://fierce-fjord-58610.herokuapp.com/orders/${email}`,{
                     method:'DELETE',
                     headers:{
                         authorization:`beareer ${localStorage.getItem('accessToken')}`
@@ -58,8 +58,8 @@ const Order = ({order,index,refetch}) => {
             <td>
                 {!paid && <button onClick={handleRemoveOrder} className='btn btn-orange-400'>Cancle</button>}
 
-                {!paid? <Link 
-                to={`/dashboard/pyment/${_id}`} className='bg-success px-4 py-2 text-white'>Pay</Link> : <Link className='bg-accent px-4 py-2 text-white'>paid</Link>}
+               {!paid && <Link to={`/dashboard/pyment/${_id}`} className='bg-success btn ml-2 px-4 py-2 text-white'>Pay</Link> }
+                {paid &&  <span disabled className='btn bg-accent px-4 py-2 text-white'>paid</span>} 
             </td>
 
         </tr>

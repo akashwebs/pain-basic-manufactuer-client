@@ -5,7 +5,7 @@ import ReviewCard from './ReviewCard';
 
 const Reivew = () => {
 
-    const { data: reviews, isLoading,refetch } = useQuery('mangeAllOrdres', () => fetch(`http://localhost:5000/allReivew`).then(res => res.json()))
+    const { data: reviews, isLoading,refetch } = useQuery('mangeAllOrdres', () => fetch(`https://fierce-fjord-58610.herokuapp.com/allReivew`).then(res => res.json()))
 
 
     if (isLoading) {

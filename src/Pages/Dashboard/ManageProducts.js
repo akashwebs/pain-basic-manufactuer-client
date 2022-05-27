@@ -5,7 +5,7 @@ import ManageProductRow from './ManageProductRow';
 
 const ManageProducts = () => {
 
-    const { data: products, isLoading,refetch } = useQuery('manageProduct', () => fetch(`http://localhost:5000/products`).then(res => res.json()))
+    const { data: products, isLoading,refetch } = useQuery('manageProduct', () => fetch(`https://fierce-fjord-58610.herokuapp.com/products`).then(res => res.json()))
 
 
     if (isLoading) {
@@ -22,8 +22,8 @@ const ManageProducts = () => {
             <div>
             
             
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                    
                     <thead className=''>
                         <tr>
