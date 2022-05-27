@@ -88,7 +88,7 @@ const Login = () => {
                                 message: 'password should be 6 charecter or longer'
                             }
                         })}
-                         type="text" placeholder="password" className="input input-bordered" />
+                         type="password" placeholder="password" className="input input-bordered" />
                          <label className="label">
                                 {errors.password?.type === 'minLength' && <span className="text-red-500 label-text-alt">{errors.password.message}</span>}
                                 {errors.password?.type === 'required' && <span className="text-red-500 label-text-alt">{errors.password.message}</span>}
