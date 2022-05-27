@@ -25,10 +25,14 @@ const SignUp = () => {
     );
     
     
-    const location = useLocation()
+   
     const navigate = useNavigate()
-    let from = location.state?.from?.pathname || '/';
-
+  
+    useEffect(() => {
+        if (token) {
+            navigate('/');
+        }
+    }, [token])
    
 
     const handleSignup = async data => {
@@ -37,11 +41,7 @@ const SignUp = () => {
         await sendEmailVerification();
 
     }
-    useEffect(() => {
-        if (user) {
-            navigate(from, { replace: true });
-        }
-    }, [user])
+  
     let errorMessage;
     if (error) {
         errorMessage = <p className='text-red-500'><small>{error?.message}</small></p>

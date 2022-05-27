@@ -26,10 +26,7 @@ const SocialLogin = () => {
       }
 
 
-      if(loading || gitLoading)
-      {
-          return <Loading></Loading>
-      }
+    
     return (
         <div>
             <div className="divider mt-0 text-xl text-neutral">Or Login With</div>
