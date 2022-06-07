@@ -30,3 +30,6 @@
 - Monogdb
 - React Hook form
 - React Router
+
+#summary 
+It is a manufacturing product selling website. Users can buy products greater than the minimum quantity and pay with cards.Users can add reviews and show them on the home page. Admin and user can update their profile. Admin can handle all orders, add products, and handle all users. 
